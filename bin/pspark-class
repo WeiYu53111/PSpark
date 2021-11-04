@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+
+# 对应Spark源码的bin/spark-class
+# 主要的工作就是拼接启动Java进程命令
+
+# Find the java binary
+if [ -n "${JAVA_HOME}" ]; then
+  RUNNER="${JAVA_HOME}/bin/java"
+else
+  if [ "$(command -v java)" ]; then
+    RUNNER="java"
+  else
+    echo "JAVA_HOME is not set" >&2
+    exit 1
+  fi
+fi
+
+echo "RUNNER="$RUNNER
+
+
+

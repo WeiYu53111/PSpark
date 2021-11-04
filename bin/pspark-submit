@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+# 对应Spark源码中  bin/spark-submit
+
+# "${}"取环境变量的值 -z 判断是否为空
+if [ -z "${PSPARK_HOME}" ]; then
+  # $0 Shell本身的文件名 如 运行命令bin/a.sh  则 $0 的值就是 bin/a.sh
+  # "$(dirname "$0")"  dirname则是取脚本路径的前缀, 以bin/spark-submit为例， 则最后执行的命令如下：
+  # source bin/find-spark-home
+  # 强制退出
+  echo "NO PSPARK_HOME"
+  exit
+fi
+
+# $@ 传递给脚本或函数的所有参数。
+#exec "${PSPARK_HOME}"/bin/spark-class org.apache.spark.deploy.SparkSubmit "$@"
+exec "${PSPARK_HOME}"/bin/spark-class org.apache.spark.deploy.SparkSubmit "$@"

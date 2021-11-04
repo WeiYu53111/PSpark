@@ -10,7 +10,7 @@
 
 
 
-关于项目名PTBSpark 其实是 pretend to be Spark 假装自己是Spark。
+关于项目名PSpark 其实是 pretend to be Spark 假装自己是Spark。
 
 
 
@@ -18,4 +18,3 @@ Spark是一个分布式计算框架，擅长处理批任务,也能基于微批�
 从官网上可以看到，Spark自身划分了好几大功能模块, 但该项目只尝试去复现这两块的功能。
 
 ![image-20211028110906808](README/image-20211028110906808.png)
-
