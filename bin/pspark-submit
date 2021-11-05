@@ -14,4 +14,4 @@ fi
 
 # $@ 传递给脚本或函数的所有参数。
 #exec "${PSPARK_HOME}"/bin/spark-class org.apache.spark.deploy.SparkSubmit "$@"
-exec "${PSPARK_HOME}"/bin/spark-class org.apache.spark.deploy.SparkSubmit "$@"
+exec "${PSPARK_HOME}"/bin/pspark-class org.apache.spark.deploy.SparkSubmit "$@"
